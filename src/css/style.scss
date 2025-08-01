@@ -21,11 +21,13 @@
     --back-white       : #F4F5F9;
 
     /* === Gradient Colors === */
-    --gradient  : linear-gradient(0deg, №3877EE 100%, #EF5DA8 100%);
+    --gradient         : linear-gradient(180deg, #3877EE 0%, #EF5DA8 100%);
+
+    /* === Border color === */
+    --border-blue      : #42567a33;
 
     /* === Shadows === */
     --shadow          : 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
-
 }
 
 /*-------- Обнуление ------*/
@@ -108,8 +110,4 @@ img {
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-h1 {
-    font-weight: 600;
 }
