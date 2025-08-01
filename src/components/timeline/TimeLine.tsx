@@ -1,5 +1,6 @@
 import Circle from './components/Circle';
 import Date from './components/Date';
+import Slider from './components/Slider';
 import Title from './components/Title';
 import './css/timeline.scss';
 
@@ -18,8 +19,7 @@ const TimeLine = () => {
                 <Date />
             </div>
 
-            <div className="slider"></div>
-
+            <Slider />
         </section>
     );
 };

@@ -36,13 +36,14 @@
         }
     }
 
-    h1 {
+    h1.main_title {
         position: absolute;
         top: 170px;
         left: 0;
         font-weight: 600;
         color: var(--black-blue);
         width: min-content;
+        line-height: 1.2;
         @include common.adaptiveFont(56, 20);
         @include common.adaptiveProperty(padding-left, 80, 30);
 
@@ -132,6 +133,31 @@
             }
             &.purple {
                 color: var(--purple);
+            }
+        }
+    }
+
+    .slider {
+        padding-top: 100px;
+        
+        .swiper {
+            padding: 0 80px;
+
+            .swiper-slide {
+                .slide {
+                    h3 {
+                        color: var(--blue);
+                        font-family: var(--font-bebas);
+                        margin-bottom: 15px;
+                        @include common.adaptiveFont(25, 16)
+                    }
+
+                    p {
+                        color: var(--black-blue);
+                        line-height: 1.5;
+                        @include common.adaptiveFont(20, 14)
+                    }
+                }
             }
         }
     }
