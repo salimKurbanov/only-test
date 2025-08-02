@@ -1,0 +1,1 @@
+export const formatPageNumber = (page: number) => page < 10 ? `0${page}` : String(page)
