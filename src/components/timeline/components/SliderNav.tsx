@@ -1,4 +1,4 @@
-const SliderNav = ({ list, activeIndex, sliderRef }) => {
+const SliderNav = ({ list, activeIndex, sliderRef, setActiveIndex }) => {
     return (
         <div className="slider_pagination">
             {list.map((_, i) => (
@@ -8,6 +8,7 @@ const SliderNav = ({ list, activeIndex, sliderRef }) => {
                     onClick={() => {
                         const swiperEl = sliderRef.current?.querySelector('.swiper') as any
                         swiperEl.swiper.slideTo(i)
+                        setActiveIndex(i)
                     }}
                 />
             ))}

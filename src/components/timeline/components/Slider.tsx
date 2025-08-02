@@ -7,9 +7,6 @@ import SliderNav from './SliderNav';
 import NavButton from './NavButton';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 const Slider = ({ list, sliderRef }: SliderProps) => {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -42,7 +39,7 @@ const Slider = ({ list, sliderRef }: SliderProps) => {
 
             </Swiper>
             
-            <SliderNav list={list} activeIndex={activeIndex} sliderRef={sliderRef}/>
+            <SliderNav list={list} activeIndex={activeIndex} sliderRef={sliderRef} setActiveIndex={setActiveIndex}/>
             <NavButton direction='next'/>
             <NavButton direction='prev'/>
         </div>

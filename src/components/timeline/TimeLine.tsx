@@ -12,8 +12,6 @@ const TimeLine = ({ maxPage, page, from, to, list, sliderRef, points, handlePage
             <Title>Исторические даты</Title>
 
             <div className="wrapper">
-                <hr />
-
                 <Circle page={page} callback={handlePage} points={points}/>
 
                 <Date from={from} to={to}/>

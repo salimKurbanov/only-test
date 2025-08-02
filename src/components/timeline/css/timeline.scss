@@ -65,6 +65,7 @@
     }
 
     .wrapper {
+        position: relative;
         margin-top: 45px;
         position: relative;
         padding: 0 80px;
@@ -75,7 +76,8 @@
             margin-top: 0;
         }
 
-        & hr {
+        &:before {
+            content: '';
             position: absolute;
             top: 50%;
             left: 50%;
