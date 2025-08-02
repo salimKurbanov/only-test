@@ -1,12 +1,11 @@
-import useDate from "../../../hooks/useDate";
+import { IDates } from "../../../types/types";
 
-const Date = () => {
-    const hook = useDate()
-
+const Date = ({ from, to }: IDates) => {
+    
     return (
         <div className='date'>
-            <span className="blue">{hook.from}</span>
-            <span className="purple">{hook.to}</span>
+            <span className="blue">{from}</span>
+            <span className="purple">{to}</span>
         </div>
     );
 };

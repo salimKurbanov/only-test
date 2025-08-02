@@ -31,12 +31,10 @@ export interface ICircleProps {
 }
 
 export interface ICircleNavProps {
-    page: string;
-    maxPage: string;
+    page: number;
+    maxPage: number;
     handleNext: () => void;
     handlePrev: () => void;
-    disabledNext: boolean;
-    disabledPrev: boolean;
 }
 
 export interface ICircleNavBtnProps {
@@ -56,7 +54,8 @@ export interface ICirclePointProps {
 }
 
 export interface IDates {
-    list: ListItem[];
+    from: number;
+    to: number;
 }
 
 export type TypeIncrement = (
@@ -78,12 +77,3 @@ export interface ITimeLineProps {
     handleNext: () => void;
     handlePrev: () => void;
 }
-
-export type TypePageStore = {
-    page: number;
-    data: any;
-    list: any;
-    nextPage: (max: number) => void;
-    prevPage: () => void;
-    toPage: (page: number) => void;
-}   

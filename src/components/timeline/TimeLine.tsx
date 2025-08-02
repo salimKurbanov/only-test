@@ -1,5 +1,4 @@
 import { ITimeLineProps } from '../../types/types';
-import { formatPageNumber } from '../../utils/utils';
 import Circle from './components/Circle';
 import CircleNavigation from './components/CircleNavigation';
 import Date from './components/Date';
@@ -7,7 +6,7 @@ import Slider from './components/Slider';
 import Title from './components/Title';
 import './css/timeline.scss';
 
-const TimeLine = ({ maxPage, page, list, sliderRef, points, handlePage, handleNext, handlePrev }) => {
+const TimeLine = ({ maxPage, page, from, to, list, sliderRef, points, handlePage, handleNext, handlePrev }: ITimeLineProps) => {
     return (
         <section className='timeline'>
             <Title>Исторические даты</Title>
@@ -17,17 +16,15 @@ const TimeLine = ({ maxPage, page, list, sliderRef, points, handlePage, handleNe
 
                 <Circle page={page} callback={handlePage} points={points}/>
 
-                <Date />
+                <Date from={from} to={to}/>
             </div>
 
             <div className="bottom_wrapper">
                 <CircleNavigation 
-                    page={formatPageNumber(page)}
-                    maxPage={formatPageNumber(maxPage)} 
+                    page={page}
+                    maxPage={maxPage} 
                     handleNext={handleNext}
                     handlePrev={handlePrev}
-                    disabledNext={page === maxPage}
-                    disabledPrev={page === 1}
                 />
 
                 <Slider list={list} sliderRef={sliderRef}/>
