@@ -4,6 +4,17 @@
 
 
 
+Проект выполнен на стеке:
+
+- **React 19** (React + ReactDOM)
+- **TypeScript**
+- **Swiper.js** для слайдера
+- **Webpack 5** для сборки (babel, sass)
+- **Sass** для стилей
+
+
+
+
 ## Как запустить
 
 
