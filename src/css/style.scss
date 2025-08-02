@@ -9,13 +9,13 @@
     --font-bebas   : "Bebas Neue", sans-serif;;
 
     /* === Base Colors === */
-    --black           : #222222;
-    --white           : #FFFFFF;
-    --black-blue      : #42567A;
-    --dark-blue       : #303e5880;
-    --light-blue      : #5D5FEF;
-    --purple          : #EF5DA8;
-    --blue            : #3877EE;
+    --black            : #222222;
+    --white            : #FFFFFF;
+    --black-blue       : #42567A;
+    --dark-blue        : #303e5880;
+    --light-blue       : #5D5FEF;
+    --purple           : #EF5DA8;
+    --blue             : #3877EE;
 
     /* === Background Colors === */
     --back-white       : #F4F5F9;
@@ -25,9 +25,10 @@
 
     /* === Border color === */
     --border-blue      : #42567a33;
+    --semi-border-blue : #42567a80;
 
     /* === Shadows === */
-    --shadow          : 0px 0px 15px 0px rgba(56, 119, 238, 0.1);
+    --shadow           : 0px 0px 15px 0px #3877ee1a;
 }
 
 /*-------- Обнуление ------*/
@@ -79,6 +80,7 @@ body{
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    background-color: var(--back-white);
 }
 
 input:-webkit-autofill,

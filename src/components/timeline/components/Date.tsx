@@ -1,8 +1,12 @@
+import useDate from "../../../hooks/useDate";
+
 const Date = () => {
+    const hook = useDate()
+
     return (
         <div className='date'>
-            <span className="blue">2015 </span>
-            <span className="purple"> 2022</span>
+            <span className="blue">{hook.from}</span>
+            <span className="purple">{hook.to}</span>
         </div>
     );
 };

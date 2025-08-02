@@ -1,28 +1,36 @@
+import { useState } from 'react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { LIST } from '../../../constants/constants';
+import { SliderProps } from '../../../types/types';
 import Slide from './Slide';
+import SliderNav from './SliderNav';
+import NavButton from './NavButton';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Slider = () => {
+const Slider = ({ list, sliderRef }: SliderProps) => {
+    const [activeIndex, setActiveIndex] = useState(0)
 
     return (
-        <div className='slider'>
+        <div className="slider_wrapper" ref={sliderRef}>
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
-                spaceBetween={80}
-                slidesPerView={3}
-                navigation
-                pagination={{ clickable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                spaceBetween={0}
+                slidesPerView={'auto'}
+                navigation={ {
+                        nextEl: '.swiper_button.next',
+                        prevEl: '.swiper_button.prev'
+                    }}
+                grabCursor={true}
+                onSlideChange={(swiper) => {
+                    setActiveIndex(swiper.activeIndex)
+                }}
             >
-                {LIST[1]?.length &&
-                    LIST[1].map((el) => (
+                {list?.length &&
+                    list.map((el) => (
                         <SwiperSlide key={el.id}>
                             <Slide 
                                 title={el.title}
@@ -31,7 +39,12 @@ const Slider = () => {
                         </SwiperSlide>
                     ))
                 }
+
             </Swiper>
+            
+            <SliderNav list={list} activeIndex={activeIndex} sliderRef={sliderRef}/>
+            <NavButton direction='next'/>
+            <NavButton direction='prev'/>
         </div>
     );
 };
