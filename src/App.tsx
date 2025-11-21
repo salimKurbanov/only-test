@@ -5,10 +5,8 @@ function App() {
   const hook = useTimeLine()
 
   return (
-    <main>
-      <div className="container">
+    <main className="container">
         <TimeLine {...hook}/>
-      </div>
     </main>
   )
 } 

@@ -4,7 +4,7 @@ import { LIST } from "../constants/constants"
 
 export default function useTimeLine() {
     const points = Object.values(LIST).map(item => item.title);
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState<number>(1)
     const [list, setList] = useState(LIST[1].list || [])
     const [from, setFrom] = useState(LIST[1].from || 0)
     const [to, setTo] = useState(LIST[1].to || 0)

@@ -1,4 +1,21 @@
-export const LIST = {
+export type TypeListItem = {
+    id: number;
+    title: string;
+    description: string;
+};
+
+export type TypeCategory = {
+    title: string;
+    from: number;
+    to: number;
+    list: TypeListItem[];
+};
+
+export type TypeList = {
+    [key: number]: TypeCategory;
+};
+
+export const LIST: TypeList = {
     1: {
         title: 'Наука',
         from: 1992,
